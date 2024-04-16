@@ -1,15 +1,15 @@
 from .common import InfoExtractor
 
 
-class YourExtractorIE(InfoExtractor):
-    _VALID_URL = r"https?://(?:\w+\.)?spwn\.jp/events/(?P<id>[0-9]+-\w+)(?:/streaming)?"
+class SPWNIE(InfoExtractor):
+    _VALID_URL = r"https?://(?:\w+\.)?spwn\.jp/events/(?P<id>[0-9]+)-\w+(?:/streaming)?"
     _TESTS = [
         {
             "url": "https://virtual.spwn.jp/events/24031601-jphololive5thfes",
             "md5": "TODO: md5 sum of the first 10241 bytes of the video file (use --test)",
             "info_dict": {
                 # For videos, only the 'id' and 'ext' fields are required to RUN the test:
-                "id": "24031601-jphololive5thfes",
+                "id": "24031601",
                 "ext": "mp4",
                 # Then if the test run fails, it will output the missing/incorrect fields.
                 # Properties can be added as:
